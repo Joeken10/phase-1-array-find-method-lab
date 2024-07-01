@@ -62,10 +62,9 @@ describe('superbowlWin(record)'), function () {
     { year: "1960", result: "N/A"}
   ]
 }
- function superbowlWin(record){
-   let result = record.find((item)=>item.result == 'W')
-   if(result !== undefined)
-       return result.year
-   else 
-       return undefined
- }
+
+function superbowlWin(record) {
+  const win = record.find(game => game.result === "W");
+  return win ? win.year :undefined;
+}
+
